@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a = "add(7, 'day')";
+    var b = "add(7, 'day', '2024/10/8 12:00:23')";
+    var c = "add(18, 'week', '2024/10/8 12:00:23')";
+
+    var curTime = new Date();
+    console.log('当前时间:', curTime);
+
+    // 1. 在当前时间加上7天
+    var addDay = curTime.setDate(curTime.getDate() + 7);
+    //console.log('增加后毫秒数:', addDay);
+    console.log(new Date(addDay));
+
+    // 2. 在特定时间加上7天
+    var nowTime = Date.parse(new Date("2024-10-8 12:00:23"));
+    //console.log('特定时间毫秒:',nowTime);
+    var daynum = 7*24*60*60*1000;
+    var addDay2 = nowTime + daynum;
+    //console.log('增加后毫秒数:', addDay2);
+    console.log(new Date(addDay2));
+
+    // 3. 在特定时间加上18周
+    var nowTime2 = Date.parse(new Date("2024-10-8 12:00:23"));
+    //console.log('特定时间毫秒:',nowTime2);
+    var weeknum = 18*7*24*60*60*1000;
+    var addweek = nowTime2 + weeknum;
+    //console.log('增加后毫秒数:', addweek);
+    console.log(new Date(addweek));
+</script>
+</html>

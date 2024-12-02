@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html">返回首页</a>
+</body>
+<script>
+    var a = "2024/12/1";
+    console.log(weekOfYear(a));
+
+    function weekOfYear(a) {
+        var b = a.split("/");
+        console.log(b);
+        var first = new Date(b[0],0,1).getDate();
+        console.log(first);
+        if (first == 1) {
+            first=0;
+        } else if (first == 0) {
+            first = 1;
+        } else first = 8-first;
+        var alldays = 0;
+        if (b[0]%4===0&&b[0]%100===0||b[0]%400===0){
+            alldays = 366;
+        } else alldays = 365;
+        var week = Math.ceil((alldays-first)/7)+(first !== 0?1:0);
+        return week;
+    }
+</script>
+</html>

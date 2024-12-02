@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="1.html">
+        ## 1.【时间增加】返回增加一定时间的时间,各个传入的单位对大小写不敏感，支持缩写和复数。 请注意，缩写是区分大小写的。<br />
+        支持的单位列表：<br />
+        单位 描述<br />
+        day 日<br />
+        week 周<br />
+        hour 小时<br />
+        minute 分钟<br />
+        second 秒<br />
+        millisecond 毫秒<br />
+        ```js<br />
+        add(7, "day"); // 不传第三个参数默认为当前时刻<br />
+        add(7, "day", "2024/10/8 12:00:23");<br />
+        add(18, "week", "2024/10/8 12:00:23");```<br />
+    </a><br />
+    <a href="2.html">
+        ## 2.定义一个 dayOfYear 函数，接受一个字符串时间，返回一个 number 来表示是该日期年中第几天。<br />
+        ```js<br />
+        dayOfYear("2010-01-01"); // 1 表示该日期是2010年的第一天```<br />
+    </a><br />
+    <a href="3.html">
+        ## 3.定义一个 isBetween 函数 返回一个 boolean 来展示一个时间是否介于两个时间之间。<br />
+        ```js<br />
+        isBetween("2010-10-20", "2010-10-19", "2010-10-25"); // true<br />
+        // 判断2010-10-20是不是在2010-10-19和2010-10-25之间```<br />
+    </a><br />
+    <a href="4.html">
+        ## 4.定义一个 isTomorrow 函数来判断参数是否是明天。<br />
+        ```js<br />
+        isTomorrow("2024/12/27"); // false<br />
+        isTomorrow("2024/12/3"); // true```<br />
+    </a><br />
+    <a href="5.html">
+        ## 5.定义一个函数 weekOfYear 返回参数年份中有多少个星期。<br />
+        ```js<br />
+        weekOfYear("2024/12/1"); // 53```<br />
+    </a>
+</body>
+</html>

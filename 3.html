@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html">返回首页</a>
+</body>
+<script>
+    var a = ["2010-10-20", "2010-10-19", "2010-10-25"];
+    console.log(isBetween(a));
+
+    function isBetween(a) {
+        var b = a[0].split("-");
+        var c = a[1].split("-");
+        var d = a[2].split("-");
+        var is = true;
+        if (b[0]>=c[0]&&b[0]<=d[0]){
+            if (b[1]>=c[1]&&b[1]<=d[1]){
+                if (b[2]>=c[2]&&b[2]<=d[2]){}
+                else {
+                    is = false;
+                }
+            }else {
+                is = false;
+            }
+        }else {
+            is = false;
+        }
+        if(is){
+            return "在后两者之间";
+        } else return "不在后两者之间";
+    }
+</script>
+</html>

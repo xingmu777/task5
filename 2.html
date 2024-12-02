@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html">返回首页</a>
+</body>
+<script>
+    var a = "2010-10-01";
+    var s1 = [31,28,31,30,31,30,31,31,30,31,30,31];
+    var s2 = [31,29,31,30,31,30,31,31,30,31,30,31];
+    console.log(dayOfYear(a));
+
+    function dayOfYear(a) {
+        var b = a.split("-");
+        var c = Number(b[0]);
+        var n1 = Number(b[1]);
+        var n2 = Number(b[2]);
+        var num = 0;
+        if (c%4===0&&c%100===0||c%400===0){
+            for(var i=0;i<n1-1;i++){
+                num+=s2[i];
+            }
+            num+=n2;
+        }else {
+            for(var i=0;i<n1-1;i++){
+                num+=s1[i];
+            }
+            num+=n2;
+        }
+        return "该日期是"+c+"年的第"+num+"天";
+    }
+</script>
+</html>

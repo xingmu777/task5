@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html">返回首页</a>
+</body>
+<script>
+    var a = "2024/12/27";
+    console.log(isTomorrow(a));
+
+    function isTomorrow(a) {
+        var b = a.split("/");
+        var is = false;
+        var date = new Date();
+        date=date.setDate(date.getDate()+1);
+        date = new Date(date);
+        //年
+        var year = date.getFullYear();
+        // 月
+        var month = date.getMonth();
+        // 日
+        var day = date.getDate();
+        if(b[0]==year){
+            if(b[1]==month){
+                if(b[2]==day){
+                    is = true;
+                }
+            }
+        }
+        if(is){
+            return "是明天";
+        } else return "不是明天";
+    }
+</script>
+</html>
